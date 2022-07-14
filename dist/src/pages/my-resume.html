@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AmirHosseinBakhtiyari">
+    <title>my-resume</title>
+    <!-- my style -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="container-md-fluid navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand"><span class="text-warning">A</span>mir<span class="text-warning">H</span>ossein<span class="text-danger">-</span><span class="text-warning">P</span>rogrammer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toogle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse " id="navbarNavDropdown" dir="rtl">
+            <ul class="navbar-nav">
+                <li class="nav-item pl-1">
+                    <a href="#" class="nav-link">خانه</a>
+                </li>
+                <li class="nav-item px-1">
+                    <a href="#about-me" class="nav-link">درباره من</a>
+                </li>
+                <li class="nav-item dropdown px-1">
+                    <a href="#" class="nav-link dropdown-toggle" 
+                    id="navbarDropdownMenuLink" 
+                    role="button" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false">
+                    کار های من
+                    </a>
+                    <ul class="dropdown-menu px-1">
+                        <li><a href="#todolist" class="dropdown-item">todo list</a></li>
+                        <li><a href="#" class="dropdown-item"></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item px-1">
+                    <a href="https://zil.ink/amir_prog.official" class="nav-link">
+                        ارتباط بامن
+                    </a>
+                   
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- header & main -->
+    <div class="row m-0 col-sm-12">
+            <header class=" container-fluid col-sm-12 col-md-4 bg-dark ">
+            <div class="card text-center text-white bg-dark p-1" id="about-me">
+                <div class="profile-picture mt-1" src="#">
+                </div>
+                <div class="card-body ">
+                    <h5 class="card-title">امیرحسین بختیاری</h5>
+                    <p class="card-text">.دانشجوی رشته مهندسی کامپیوتر و برنامه نویس وب</p>    
+                </div>
+                <div class="card-header">توانایی ها</div>
+                <div>
+                    <ul class="list-group p-0 list-group-flush">
+                        <li class="list-group-item">
+                            HTML5
+                        </li>
+                        <li class="list-group-item">
+                            CSS3
+                        </li>
+                        <li class="list-group-item">
+                            Bootstrap 5
+                        </li>
+                        <li class="list-group-item">
+                            JavaScript ES6
+                        </li>
+                        <li class="list-group-item">
+                            Git
+                        </li>
+                        <li class="list-group-item">
+                            Sass
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main class="col-sm-12 col-md-8 text-white bg-dark">
+            <!-- todolist -->
+            <div class="todolist p-1 " dir="rtl">
+                <!-- task form -->
+                <form action="#" class="mb-1"id="taskForm">
+                    <div class="form-group">
+                       <label for="taskInput" class="form-label">تسک</label>
+                        <input type="text" class="form-control task-input mb-1" id="taskInput" placeholder="تسک خود را اضافه کنید"> 
+                    </div>
+                    <button type="submit" class=" btn btn-primary" id="addBtn">اضافه</button>    
+                </form>
+                <!-- filter task -->
+               <div class="task-input mb-1" id="taskInput">
+                    <label for="filter" class="form-label">جست وجو</label>
+                    <input type="text" class="form-control" id="filter" placeholder="جست و جو کنید">
+                </div>
+                <!-- tasks -->
+                <div class="card col-12 my-1">
+                    <div class="card-head mb-1 text-dark">تسک های من</div>
+                    <div>
+                        <ul class="list-group todo-task list-group-flush bg-secondry" id="todoTask">
+                            <!-- <li class="list-group-item d-flex justify-content-between" id="taskListItem">
+                                تسک 1
+                                <div>
+                                    <i class="task-done text-primary btn">done</i>
+                                    <i class="task-delete text-danger btn">delete</i>
+                                </div>
+                               </li> -->
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-danger delete-all-task d-flex" id="clearTask">حذف همه</button>
+                    </div>
+                </div>
+                <!-- do it task -->
+                <div class="card col-12 my-1">
+                    <div class="card-head mb-1 text-dark">تسک های انجام شده</div>
+                    <div>
+                        <ul class="list-group list-group-flush bg-secondry" id="taskListDone">
+                            <!-- <li class="list-group-item d-flex justify-content-between" id="taskListItemDone">
+                                تسک 1
+                                
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-danger delete-all-task-done d-flex" id="clearTaskDone">حذف همه</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container-fluid text-center bg-dark text-white">
+        &COPY;<span class="text-warning">A</span>mir<span class="text-warning">H</span>ossein<span class="text-danger">-</span><span class="text-warning">P</span>rogrammer</a>
+        </div>
+    </footer>
+    <!-- scripts -->
+    <script src="../js/script.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
